@@ -1,5 +1,12 @@
 @import "general";
 
+@mixin brush-bg($path) {
+    background-image: url($path);
+    background-repeat: no-repeat;
+    background-size: 100% 95%;
+    padding: 8px 0;
+}
+
 .main {
     margin: 0 10%;
 }
@@ -66,10 +73,24 @@
 .highlight {
     cursor: pointer;
     border: none;
-    background-image: url("/assets/brush-stroke-banner-6.svg");
-    background-repeat: no-repeat;
-    background-size: 100% 95%;
-    padding: 8px 0;
+    &--html { 
+        @include brush-bg(("/assets/html-orange.svg"))
+    }
+    &--ejs { 
+        @include brush-bg(("/assets/ejs-pink.svg"))
+    }
+    &--sass { 
+        @include brush-bg(("/assets/sass-pink.svg"))
+    }
+    &--js { 
+        @include brush-bg(("/assets/js-yellow.svg"))
+    }
+    &--express { 
+        @include brush-bg(("/assets/express-brown.svg"))
+    }
+    &--firebase { 
+        @include brush-bg(("/assets/firebase-orange.svg"))
+    }
 }
 
 .preTitle {
@@ -103,7 +124,6 @@ $accent-yellow: #faf689;
     &__project {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        column-gap: 2.4rem;
         align-items: center;
         background: white;
         margin: 3.2rem 0rem;
@@ -137,8 +157,9 @@ $accent-yellow: #faf689;
 
 .tag {
     font-size: 1.6rem;
-    &:not(:first-of-type) {
-        padding: 0.4rem 0.8rem;
-        margin: 0rem 0.8rem;
+    padding: 0.4rem 0.8rem;
+    margin: 0rem 0.8rem;
+    &:first-of-type{
+        margin-left: 0;
     }
 }
