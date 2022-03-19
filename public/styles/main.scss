@@ -62,7 +62,10 @@
     display: inline-block;
     cursor: pointer;
     transition: all 200ms ease-out;
-    //border-radius: 0px 12px;
+    border-radius: 5000px;
+    &__filled{
+        background: #faf689;
+    }
     &:hover {
         //transform: scale(1.05);
     }
@@ -96,7 +99,7 @@
 .preTitle {
     display: flex;
     align-items: center;
-    color: #333333; //color will be the accent
+    color: #333333;
     margin-bottom: 0.8rem;
     hr {
         width: 4.8rem;
@@ -108,8 +111,8 @@
     margin-bottom: 2.4rem;
     font-size: 3.6rem;
     &--secondary {
-        //font-size: 1.8rem;
-        margin-bottom: 0.8rem;
+        font-size: 2.4rem;
+        margin-bottom: 1rem;
     }
 }
 
@@ -127,7 +130,7 @@ $accent-yellow: #faf689;
         align-items: center;
         background: white;
         margin: 3.2rem 0rem;
-        height: 28rem;
+        //height: 30rem;
     }
 }
 .project {
@@ -135,8 +138,13 @@ $accent-yellow: #faf689;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: fill-available;
+        //height: fill-available;
         padding: 3.2rem;
+        height: 100%;
+        .details{
+            color: #333333;
+            line-height: 1.6;
+        }
         &--buttons {
             display: flex;
             column-gap: 2.4rem;
@@ -146,20 +154,27 @@ $accent-yellow: #faf689;
         display: flex;
         align-items: center;
         justify-content: center;
-        background: #757780;
+        background: linear-gradient(90deg, rgba(220,220,220,1) 0%, rgba(239,240,239,1) 100%);
         height: 100%;
+        overflow: hidden;
         img {
-            width: 65%;
-            height: 65%;
+            width: 85%;
+            height: 85%;
+            box-shadow: .75em .75em 2em #333333;
         }
     }
 }
 
 .tag {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     padding: 0.4rem 0.8rem;
     margin: 0rem 0.8rem;
+    border: solid 1px #333333;
+    border-radius: 500px;
+    color: #333333;
     &:first-of-type{
         margin-left: 0;
     }
 }
+
+// '2022-03-19 21:24:04'
