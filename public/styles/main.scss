@@ -158,8 +158,8 @@ $accent-yellow: #faf689;
         height: 100%;
         overflow: hidden;
         img {
-            width: 85%;
-            height: 85%;
+            width: 100%;
+            height: 100%;
             box-shadow: .75em .75em 2em #333333;
         }
     }
@@ -178,3 +178,26 @@ $accent-yellow: #faf689;
 }
 
 // '2022-03-19 21:24:04'
+
+.external-links{
+    position: fixed;
+    width: 4rem;
+    bottom: 0;
+    left: auto;
+    right: 3.2rem;
+    color: #333333;
+    ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size:2.4rem;
+        li{
+            margin: 0.8rem 0rem;
+        }
+    }
+    .line{
+        height: 8.4rem;
+        margin-top: .8rem;
+        border: solid 0.05px #333333;
+    }
+}
