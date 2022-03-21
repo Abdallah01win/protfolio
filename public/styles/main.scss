@@ -1,27 +1,8 @@
+@import "variables";
+@import "mixines";
 @import "general";
-
-@mixin brush-bg($path) {
-    background-image: url($path);
-    background-repeat: no-repeat;
-    background-size: 100% 95%;
-    padding: 8px 0;
-}
-
-.main {
-    margin: 0 10%;
-}
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 6rem;
-    &__links {
-        @extend .nav;
-        li {
-            margin: 0 1.6rem;
-        }
-    }
-}
+@import "utilities";
+@import "./components/navigation";
 
 .hero {
     display: grid;
@@ -35,7 +16,7 @@
             font-size: 5.2rem;
             margin-bottom: 1.6rem;
             span {
-                color: #333333;
+                color: $sec-text;
             }
         }
         p {
@@ -50,73 +31,7 @@
             height: 100%;
         }
     }
-    &__buttons {
-        display: flex;
-        column-gap: 2.4rem;
-    }
 }
-
-.btn {
-    padding: 1rem 2rem;
-    border: solid 1px black;
-    display: inline-block;
-    cursor: pointer;
-    transition: all 200ms ease-out;
-    border-radius: 5000px;
-    &__filled{
-        background: #faf689;
-    }
-    &:hover {
-        //transform: scale(1.05);
-    }
-    &:active {
-        //transform: scale(0.9);
-    }
-}
-.highlight {
-    cursor: pointer;
-    border: none;
-    &--html { 
-        @include brush-bg(("/assets/html-orange.svg"))
-    }
-    &--ejs { 
-        @include brush-bg(("/assets/ejs-pink.svg"))
-    }
-    &--sass { 
-        @include brush-bg(("/assets/sass-pink.svg"))
-    }
-    &--js { 
-        @include brush-bg(("/assets/js-yellow.svg"))
-    }
-    &--express { 
-        @include brush-bg(("/assets/express-brown.svg"))
-    }
-    &--firebase { 
-        @include brush-bg(("/assets/firebase-orange.svg"))
-    }
-}
-
-.preTitle {
-    display: flex;
-    align-items: center;
-    color: #333333;
-    margin-bottom: 0.8rem;
-    hr {
-        width: 4.8rem;
-        height: 2px;
-        margin-right: 1.2rem;
-    }
-}
-.title {
-    margin-bottom: 2.4rem;
-    font-size: 3.6rem;
-    &--secondary {
-        font-size: 2.4rem;
-        margin-bottom: 1rem;
-    }
-}
-
-$accent-yellow: #faf689;
 
 // projects section
 
@@ -130,74 +45,54 @@ $accent-yellow: #faf689;
         align-items: center;
         background: white;
         margin: 3.2rem 0rem;
-        //height: 30rem;
     }
 }
-.project {
-    &__info {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        //height: fill-available;
-        padding: 3.2rem;
-        height: 100%;
-        .details{
-            color: #333333;
-            line-height: 1.6;
-        }
-        &--buttons {
-            display: flex;
-            column-gap: 2.4rem;
-        }
+.project__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3.2rem;
+    height: 100%;
+    &--details {
+        color: $sec-text;
+        line-height: 1.6;
     }
-    &__img {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: linear-gradient(90deg, rgba(220,220,220,1) 0%, rgba(239,240,239,1) 100%);
-        height: 100%;
-        overflow: hidden;
-        img {
-            width: 100%;
-            height: 100%;
-            box-shadow: .75em .75em 2em #333333;
-        }
+    .btn-container{
+        column-gap: 1.6rem;
+    }
+}
+.project__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $gray-linier-gradiant;
+    height: 100%;
+    img {
+        width: 85%;
+        height: 85%;
+        box-shadow: 0.75em 0.75em 2em $sec-text;
     }
 }
 
-.tag {
-    font-size: 1.2rem;
-    padding: 0.4rem 0.8rem;
-    margin: 0rem 0.8rem;
-    border: solid 1px #333333;
-    border-radius: 500px;
-    color: #333333;
-    &:first-of-type{
-        margin-left: 0;
-    }
-}
-
-// '2022-03-19 21:24:04'
-
-.external-links{
+.external-links {
     position: fixed;
     width: 4rem;
     bottom: 0;
     left: auto;
     right: 3.2rem;
-    color: #333333;
-    ul{
+    color: $sec-text;
+    ul {
         display: flex;
         flex-direction: column;
         align-items: center;
-        font-size:2.4rem;
-        li{
+        font-size: 2.4rem;
+        li {
             margin: 0.8rem 0rem;
         }
     }
-    .line{
+    .line {
         height: 8.4rem;
-        margin-top: .8rem;
+        margin-top: 0.8rem;
         border: solid 0.05px #333333;
     }
 }

@@ -1,0 +1,16 @@
+@mixin brush-bg($path) {
+    background-image: url($path);
+    background-repeat: no-repeat;
+    background-size: 100% 95%;
+    padding: 8px 0;
+}
+
+@mixin btn($p-top, $p-bot, $font) {
+    font-size: $font;
+    padding: $p-top $p-bot ;
+    border: solid 1px black;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 200ms ease-out;
+    border-radius: 5000px;
+}
