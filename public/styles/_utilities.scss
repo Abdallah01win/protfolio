@@ -1,27 +1,24 @@
-.btn-container{
+.btn-container {
     display: flex;
     column-gap: 2.4rem;
 }
 .btn {
-    @include btn(1rem, 2rem, inherit)
+    @include btn(1rem, 2rem, inherit, normal);
 }
 .btn-mid {
-    @include btn(0.8rem, 1.6rem, 1.4rem)
+    @include btn(0.8rem, 1.6rem, 1.4rem, 600);
 }
 .btn-sml {
-    @include btn(0.6rem, 1.2rem, 1.2rem)
+    @include btn(0.6rem, 1.2rem, 1.2rem, 600);
 }
 
 .tag {
-    font-size: 1.2rem;
-    padding: 0.4rem 0.8rem;
-    margin: 0rem 0.8rem;
-    border: solid 1px $sec-text;
-    border-radius: 500px;
-    color: $sec-text;
-    &:first-of-type {
-        margin-left: 0;
-    }
+    @extend .btn-sml;
+    cursor: default;
+    font-weight: normal;
+    border: none;
+    color: white;
+    background: $sec-text;
 }
 
 .preTitle {
@@ -67,4 +64,18 @@
     &--firebase {
         @include brush-bg(("/assets/firebase-orange.svg"));
     }
+}
+
+.flex-wrap-container {
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    /*column-gap: 2.4rem;
+    row-gap: 2.4rem;*/
+}
+.place-center {
+    display: grid;
+    place-content: center;
 }

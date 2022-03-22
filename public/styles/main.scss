@@ -93,6 +93,23 @@
     .line {
         height: 8.4rem;
         margin-top: 0.8rem;
-        border: solid 0.05px #333333;
+        border: solid 0.05px $sec-text;
     }
+}
+
+.skills{
+    margin-top: 4.8rem;
+    &__container{
+        padding: 6.4rem 15%;
+    }
+    ul{
+        font-size: 4.8rem;
+        img{
+            width: 10rem;
+        }   
+        /*img:last-of-type{
+            width: 6rem;
+        }*/
+    }
+
 }

@@ -5,8 +5,9 @@
     padding: 8px 0;
 }
 
-@mixin btn($p-top, $p-bot, $font) {
+@mixin btn($p-top, $p-bot, $font, $f-waight) {
     font-size: $font;
+    font-weight: $f-waight;
     padding: $p-top $p-bot ;
     border: solid 1px black;
     display: inline-block;
