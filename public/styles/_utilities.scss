@@ -1,16 +1,44 @@
+.btnAnimation{
+    span{
+        position: absolute;
+        background: #666666;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        animation:  animate 800ms linear infinite;
+        border-radius: 50%
+    }
+    @keyframes animate {
+        0%{
+            width: 0px;
+            height: 0px;
+            opacity: 0.5;
+        }
+        100%{
+            width: 500px;
+            height: 500px;
+            opacity: 0;
+        }
+    }
+}
+
 .btn-container {
     display: flex;
     column-gap: 2.4rem;
 }
+
 .btn {
     @include btn(1rem, 2rem, inherit, normal);
+    @extend .btnAnimation;
 }
 .btn-mid {
     @include btn(0.8rem, 1.6rem, 1.4rem, 600);
+    @extend .btnAnimation;
 }
 .btn-sml {
     @include btn(0.6rem, 1.2rem, 1.2rem, 600);
+    @extend .btnAnimation;
 }
+
 
 .tag {
     @extend .btn-sml;
