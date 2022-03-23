@@ -1,10 +1,10 @@
 .btnAnimation{
     span{
         position: absolute;
-        background: #666666;
+        background: $third-tetx;
         transform: translate(-50%, -50%);
         pointer-events: none;
-        animation:  animate 800ms linear infinite;
+        animation: animate 800ms linear infinite;
         border-radius: 50%
     }
     @keyframes animate {
@@ -68,7 +68,7 @@
 
 .sec-title {
     font-size: 2.4rem;
-    margin-bottom: 1.2rem;
+    margin-bottom: 0.8rem;
 }
 
 .highlight {
@@ -83,7 +83,7 @@
     &--sass {
         @include brush-bg(("/assets/sass-pink.svg"));
     }
-    &--js {
+    &__js {
         @include brush-bg(("/assets/js-yellow.svg"));
     }
     &--express {

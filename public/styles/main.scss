@@ -45,6 +45,7 @@
         align-items: center;
         background: white;
         margin: 3.2rem 0rem;
+        //height: 35rem;
     }
 }
 .project__info {
@@ -56,6 +57,7 @@
     &--details {
         color: $sec-text;
         line-height: 1.6;
+        margin: 2.4rem 0rem;
     }
     .btn-container{
         column-gap: 1.6rem;
@@ -73,6 +75,21 @@
         box-shadow: 0.75em 0.75em 2em $sec-text;
     }
 }
+.tech-stack{
+    display: flex;
+    //justify-content: space-between;
+    margin-top: 2.4rem;
+    font-size: 2.4rem;
+    li{
+        margin-right: 4rem;
+    }
+    img{
+        width: 6rem;
+    }
+    .ejs{
+        width: 3rem;
+    }
+}
 
 .external-links {
     position: fixed;
@@ -87,7 +104,12 @@
         align-items: center;
         font-size: 2.4rem;
         li {
+            transition: all 300ms ease-out;
             margin: 0.8rem 0rem;
+            &:hover{
+                color:black;
+                transform: scale(1.3);
+            }
         }
     }
     .line {

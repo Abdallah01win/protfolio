@@ -5,7 +5,6 @@ const btnsSml = document.getElementsByClassName('btn-sml')
 
 function animateBtn(btn){
     btn.addEventListener('click', function (e){
-        e.preventDefault;
         console.log('clicked')
         let x = e.pageX - e.target.offsetLeft;
         let y = e.pageY - e.target.offsetTop;
