@@ -3,7 +3,7 @@
 <%- include("./components/head") %>
 
 <body>
-    <main class="main">
+    <main class="main" >
         <%- include('./components/navigation') %> 
         <div class="hero">
             <div class="hero__text">
@@ -48,12 +48,36 @@
             <%- include('./components/daily-weather') %> 
         </section>
         <section class="about-me">
-            <div class="preTitle">
-                <hr>
-                About Me
+            <div class="about-me__info">
+                <div class="preTitle">
+                    <hr>
+                    About Me
+                </div>
+                <h2 class="title">My journy in Development</h2>
+                <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam veritatis odio assumenda sunt architecto aliquam itaque fugit magnam. Vel fuga quos a veritatis.</p>
+                <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam veritatis odio assumenda sunt architecto aliquam itaque fugit magnam. Vel fuga quos a veritatis. Incidunt expedita ullam perspiciatis rem? Deserunt, ipsum.</p>
             </div>
-            <h2 class="title">My journy in Development</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam veritatis odio assumenda sunt architecto aliquam itaque fugit magnam. Vel fuga quos a veritatis. Incidunt expedita ullam perspiciatis rem? Deserunt, ipsum.</p>
+            <div class="about-me__svg"></div>
+            <div class="about-me__skills">
+                <h2 class="sec-title">Things I've learned Along the way!</h2>
+                <div class="three-col-grid">
+                    <div class="skill">
+                        <img src="/assets/pixeltrue-icons-web-design-2.svg" alt="">
+                        <div class="skill__title">UI Design</div>
+                        <div class="skill__discription paragraph">Though my usage of design tools like figma or ilustrator is basic, I have a deep understanding of UI and UX principles that I apply in my projects.</div>
+                    </div>
+                    <div class="skill">
+                        <img src="/assets/pixeltrue-icons-building-website-3.svg" alt="">
+                        <div class="skill__title">Front-End Development</div>
+                        <div class="skill__discription paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores et assumenda sed labore excepturi ipsum?</div>
+                    </div>
+                    <div class="skill">
+                        <img src="/assets/pixeltrue-icons-seo-2.svg" alt="">
+                        <div class="skill__title">UI Design</div>
+                        <div class="skill__discription paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores et assumenda sed labore excepturi ipsum?</div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 <%- include("./components/scripts") %> 
