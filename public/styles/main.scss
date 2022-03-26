@@ -99,12 +99,16 @@
         flex-direction: column;
         align-items: center;
         font-size: 2.8rem;
-        li {
+        a {
             transition: all 300ms ease-out;
             margin: 0.8rem 0rem;
+            cursor: pointer;
             &:hover {
                 color: black;
                 transform: scale(1.3);
+            }
+            &:active{
+                transform: scale(1);
             }
         }
     }
