@@ -2,9 +2,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
     height: 6rem;
+    width: 100%;
+    z-index: 10;
+    padding: 0rem 10%;
+    background: $main-bg;
+    transition: all 200ms ease-out;
     &__links {
-        @extend .nav;
+        display: flex;
+    justify-content: space-between;
+    align-items: center;
         li {
             margin: 0 1.6rem;
         }

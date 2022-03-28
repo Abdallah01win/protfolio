@@ -117,3 +117,13 @@
     display: grid;
     place-content: center;
 }
+
+
+.scroll-down .nav{
+    transform: translate3d(0, -100%, 0);
+}
+.scroll-up .nav{
+    box-shadow: 0 10px 10px -10px rgb(0, 0, 0);
+    background-color: rgba(247, 247, 247, .4);
+    backdrop-filter: blur(40px);
+}
