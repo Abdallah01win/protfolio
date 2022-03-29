@@ -127,3 +127,9 @@
     background-color: rgba(247, 247, 247, .4);
     backdrop-filter: blur(40px);
 }
+
+.gsap-animate-up{
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+    opacity: 0;
+    transform: translateY(100px);
+}

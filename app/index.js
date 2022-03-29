@@ -41,3 +41,17 @@ window.addEventListener('scroll', ()=>{
     }
     lastScroll = currentScroll;
 })
+
+let tl = gsap.timeline( {defaults:{ease:"power4.inOut", duration: 2}});
+
+tl.to('.hero__text', {'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', opacity:1, y:0, duration:2.2})
+.to('.hero__img', {'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', opacity:1}, "-=1.8")
+
+gsap.registerPlugin(ScrollTrigger);
+gsap.to('.projects__project',
+{scrollTrigger:".projects__project",
+'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', opacity:1, y:0, duration:2, stagger:0.2})
+
+gsap.to('.skill',
+{scrollTrigger:".skill",
+'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', opacity:1, y:0, stagger:.2})
