@@ -19,4 +19,8 @@
             margin: 0 1.6rem;
         }
     }
+    .nav-element{
+        @extend .gsap-reveal-up;
+        transform: translateY(25px);
+    }
 }

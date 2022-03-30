@@ -131,7 +131,11 @@
 }
 
 .gsap-animate-up{
-   // clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+    opacity: 0;
+    transform: translateY(100px);
+}
+.gsap-reveal-up{
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
     opacity: 0;
     transform: translateY(100px);
 }

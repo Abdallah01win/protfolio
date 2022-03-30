@@ -48,27 +48,35 @@ gsap.registerPlugin(ScrollTrigger);
 function gsapAnimateUp(selector) {
     let elements = gsap.utils.toArray(selector);
     elements.forEach(element => {
-        gsap.to(element,{
+        gsap.to(element, {
             scrollTrigger: element,
-            opacity: 1, y: 0, duration: 1,
-        })       
+            opacity: 1, y: 0, duration: 1, 
+        },"bottom center")       
     });
 }
-gsapAnimateUp('.title');
 gsapAnimateUp('.preTitle');
+gsapAnimateUp('.title');
+gsapAnimateUp('.skills-title');
 gsapAnimateUp('.projects__project');
 gsapAnimateUp('.about-me__info--text');
+gsapAnimateUp('.about-me__svg');
+gsapAnimateUp('.contact');
 
 // animate elements up and reveal on scroll
 gsap.to('.skill',{
     scrollTrigger: ".skill",
-    'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', opacity: 1, y: 0, stagger: .3
+    'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', opacity: 1, y: 0, stagger: .5
 })
     
-
 // Animate and reveal elements on page load
 let tl = gsap.timeline({ defaults: { ease: "power4.inOut", duration: 2 } });
-
-tl.to('.hero__text', { 'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', opacity: 1, y: 0, duration: 2.2 })
-    .to('.hero__img', { 'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', opacity: 1 }, "-=1.8")
-    .to('.external-links', { 'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', opacity: 1, duration: 3 }, "-=1.2")
+tl.to('.nav-element',{
+    'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', opacity: 1, y: 0, stagger: .2, duration:1.4
+})
+function gsapRevealUp(target, duration, seq=""){
+    tl.to(target, { 'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', opacity: 1, y: 0, duration: duration }, seq)
+}
+gsapRevealUp('.hero__text', 2.4, "-=1.2");
+gsapRevealUp('.hero__img', 2.2, "-=2");
+gsapRevealUp('.external-links', 3, "-=1.4");
+// don't animate untill the element is in the view port fully
