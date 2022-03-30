@@ -50,6 +50,7 @@
 }
 
 .preTitle {
+    @extend .gsap-animate-up;
     display: flex;
     align-items: center;
     color: $sec-text;
@@ -62,6 +63,7 @@
 }
 
 .title {
+    @extend .gsap-animate-up;
     font-size: 3.6rem;
     margin-bottom: 2.4rem;
     &:first-of-type{
@@ -129,7 +131,7 @@
 }
 
 .gsap-animate-up{
-    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+   // clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
     opacity: 0;
     transform: translateY(100px);
 }

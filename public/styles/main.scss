@@ -93,6 +93,7 @@
 }
 
 .external-links {
+    @extend .gsap-animate-up;
     position: fixed;
     width: 4rem;
     bottom: 0;
@@ -117,10 +118,16 @@
             }
         }
     }
-    .line {
+    /*.line {
         height: 8.4rem;
         margin-top: 0.8rem;
         border: solid 0.05px $sec-text;
+    }*/
+    hr{
+        height: 8.4rem;
+        margin-top: 0.8rem;
+        margin-bottom: 10rem;
+        
     }
 }
 
