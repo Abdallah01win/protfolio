@@ -29,6 +29,12 @@ html{
 body{
     font-size: 1.8rem;
     background: $main-bg;
+    hr{
+        border: none;
+        background: $third-tetx;
+        width: 1px;
+        height: 1px;
+    }
 }
 .main {
     margin: 0 10%;
