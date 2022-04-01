@@ -43,53 +43,39 @@ window.addEventListener('scroll', () => {
 
 // ----- GSAP Animations ------- //
 
-// animate elements up on scroll 
 gsap.registerPlugin(ScrollTrigger);
-/*ScrollTrigger.create({
-    trigger: ".box-c",
-    pin: true,
-    start: "center center",
-    end: "+=300"
-  });*/
 
+// animate elements up on scroll 
 function gsapAnimateUp(selector) {
     let elements = gsap.utils.toArray(selector);
-    elements.forEach(element => {
-        gsap.to(element, ScrollTrigger.create({
-            trigger: element,
-            pin: true,
-            start: "center center",
-            //end: "+=300"
-          }),{
-            opacity: 1, y: 0, duration: 1, 
-        })  
-        /*gsap.to(element),{
+    elements.forEach(element => { 
+        gsap.to(element,{
             scrollTrigger:{
                 trigger: element,
-                scrub: .3,
                 start: "bottom bottom"
             },
             opacity: 1, y: 0
-        }  */  
+        } )  
     });
 }
-/*gsapAnimateUp('.preTitle');
+gsapAnimateUp('.preTitle');
 gsapAnimateUp('.title');
 gsapAnimateUp('.skills-title');
 gsapAnimateUp('.projects__project');
 gsapAnimateUp('.about-me__info--text');
 gsapAnimateUp('.about-me__svg');
-gsapAnimateUp('.contact');*/
+gsapAnimateUp('.contact');
 
 // animate elements up and reveal on scroll
-/*gsap.to('.skill',{
+gsap.to('.skill',{
     scrollTrigger: ".skill",
     'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', opacity: 1, y: 0, stagger: .5
-})*/
+})
     
 // Animate and reveal elements on page load
 let tl = gsap.timeline({ defaults: { ease: "power4.inOut", duration: 2 } });
 
+// Nav Elements animation
 tl.to('.nav-element',{
     'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', opacity: 1, y: 0, stagger: .2, duration:1.4
 })
@@ -99,4 +85,3 @@ function gsapRevealUp(target, duration, seq=""){
 gsapRevealUp('.hero__text', 2.4, "-=1.2");
 gsapRevealUp('.hero__img', 2.2, "-=2");
 gsapRevealUp('.external-links', 3, "-=1.4");
-// don't animate untill the element is in the view port fully

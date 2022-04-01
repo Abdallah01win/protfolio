@@ -44,13 +44,13 @@
     flex-direction: column;
     margin-top: 12rem;
     &__project {
-        //@extend .gsap-animate-up;
-        //transform: translateY(50px);
+        @extend .gsap-animate-up;
+        transform: translateY(50px);
         display: grid;
         grid-template-columns: 1fr 1fr;
         align-items: center;
         background: white;
-        //margin: 8rem 0rem;
+        margin: 6.4rem 0rem;
         border-radius: 20px;
     }
 }
@@ -126,7 +126,7 @@
 }
 
 .about-me {
-    margin: 12rem 0rem;
+    margin: 8rem 0rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     &__skills {
@@ -134,16 +134,18 @@
         text-align: center;
         margin-top: 12rem;
     }
+    &__info--text{
+        @extend .gsap-animate-up;
+    }
     &__svg{
-        //@extend .gsap-reveal-up;
-        //@extend .gsap-animate-up;
+        @extend .gsap-animate-up;
     }
 }
 .skills-title{
-    //@extend .gsap-animate-up;
+    @extend .gsap-animate-up;
 }
 .skill {
-   //@extend .gsap-animate-up;
+   @extend .gsap-animate-up;
     margin-top: 2.4rem;
     img {
         width: 10rem;
@@ -163,7 +165,7 @@
 
 .contact {
     margin: 14rem 0rem;
-    //@extend .gsap-animate-up;
+    @extend .gsap-animate-up;
     &__info {
         text-align: center;
         width: 70%;
